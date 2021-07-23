@@ -53,6 +53,7 @@
       display: none;
       &.active {
         display: flex;
+        animation: navFadeIn 200ms ease-out;
       }
 
       position: fixed;
@@ -69,7 +70,7 @@
 
       li {
         margin: 0.5rem 0;
-        font-size: 1.5rem;
+        font-size: 1.35rem;
       }
     }
   }
@@ -80,5 +81,14 @@
 
   @include untilSize(783px) {
     top: 46px;
+  }
+}
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

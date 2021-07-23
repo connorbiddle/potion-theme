@@ -1,3 +1,11 @@
+$breakpoints: (
+  "sm": $bpSm,
+  "md": $bpMd,
+  "lg": $bpLg,
+  "xl": $bpXl,
+  "xxl": $bpXxl,
+);
+
 @each $name, $size in $breakpoints {
   .until-#{$name} {
     @include fromSize($size) {

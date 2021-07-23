@@ -114,16 +114,23 @@ body {
         align-items: center;
         padding: 0 1rem; }
         .site-header__links.active {
-          display: flex; }
+          display: flex;
+          animation: navFadeIn 200ms ease-out; }
         .site-header__links li {
           margin: 0.5rem 0;
-          font-size: 1.5rem; } }
+          font-size: 1.35rem; } }
 
 .admin-bar .site-header {
   top: 32px; }
   @media screen and (max-width: 782px) {
     .admin-bar .site-header {
       top: 46px; } }
+
+@keyframes navFadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 .site-footer {
   padding: 0 1rem; }
