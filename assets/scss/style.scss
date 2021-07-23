@@ -9,5 +9,9 @@
   License URI: http://www.gnu.org/licenses/gpl-2.0.html
   Text Domain: potion
 */
+
+$test: red;
+
 body {
-  background-color: red; }
+  background-color: $test;
+}

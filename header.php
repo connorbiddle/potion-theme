@@ -17,5 +17,13 @@
   <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
       <header>
-        Hello, I'm a header
+        <div class="header-section">
+          Site Name/Logo
+        </div>
+        <div class="header-section grow">
+          <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        </div>
+        <div class="header-section">
+          Search Button
+        </div>
       </header>
