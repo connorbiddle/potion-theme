@@ -16,14 +16,23 @@
 
   <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
-      <header>
-        <div class="header-section">
-          Site Name/Logo
+      <header class="site-header">
+        <div class="site-header__section site-header__logo">
+          Site Logo
         </div>
-        <div class="header-section grow">
-          <?php wp_nav_menu( array( 'theme_location' => 'header-menu' ) ); ?>
+        <div class="site-header__section grow">
+          <?php wp_nav_menu( array(
+            'theme_location' => 'header-menu',
+            'menu_class' => 'site-header__links',
+            'container' => false
+            ) ); ?>
         </div>
-        <div class="header-section">
-          Search Button
+        <div class="site-header__section site-header__buttons">
+          <button class="site-header__search-button">
+            <i data-feather="search"></i>
+          </button>
+          <button class="site-header__menu-button until-md">
+            <i data-feather="menu"></i>
+          </button>
         </div>
       </header>

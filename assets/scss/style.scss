@@ -10,8 +10,15 @@
   Text Domain: potion
 */
 
-$test: red;
+// Base
+@import "./base/variables";
+@import "./base/mixins";
+@import "./base/global";
 
-body {
-  background-color: $test;
-}
+// Layout
+@import "./layout/responsive";
+@import "./layout/container";
+
+// Components
+@import "./components/site-header";
+@import "./components/site-footer";

@@ -1,6 +1,16 @@
 <?php
 
-function register_my_menus() {
+function potion_enqueue_scripts() {
+  // Styles
+  wp_enqueue_style( 'style', get_stylesheet_uri() );
+  wp_enqueue_style( 'google-fonts', 'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap', false );
+
+  // Scripts
+  wp_enqueue_script( 'feather', 'https://unpkg.com/feather-icons', false );
+  wp_enqueue_script( 'navigation', get_template_directory_uri() . '/assets/js/navigation.js', false );
+}
+
+function potion_custom_menus() {
   register_nav_menus(
     array(
       'header-menu' => __( 'Header Menu' ),
@@ -9,4 +19,5 @@ function register_my_menus() {
   );
 }
 
-add_action( 'init', 'register_my_menus' );
+add_action( 'wp_enqueue_scripts', 'potion_enqueue_scripts' );
+add_action( 'init', 'potion_custom_menus' );
