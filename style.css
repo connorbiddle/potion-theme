@@ -80,7 +80,16 @@ body {
   background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 1; }
   .site-header__logo {
-    z-index: 2; }
+    z-index: 2;
+    height: 35%; }
+    .site-header__logo .custom-logo {
+      max-height: 100%;
+      width: auto; }
+    .site-header__logo a {
+      color: inherit;
+      text-decoration: none; }
+    .site-header__logo h1 {
+      font-size: 1.5rem; }
   .site-header__buttons {
     display: flex;
     align-items: center;

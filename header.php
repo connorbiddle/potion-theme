@@ -18,7 +18,15 @@
     <?php wp_body_open(); ?>
       <header class="site-header">
         <div class="site-header__section site-header__logo">
-          Site Logo
+          <?php
+            if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ):
+              the_custom_logo();
+            else: ?>
+              <a href="<?php home_url(); ?>">
+                <h1><?php bloginfo( 'name' ); ?></h1>
+              </a> <?php
+            endif;
+          ?>
         </div>
         <div class="site-header__section grow">
           <?php wp_nav_menu( array(
@@ -36,3 +44,4 @@
           </button>
         </div>
       </header>
+      <div class="page-content">

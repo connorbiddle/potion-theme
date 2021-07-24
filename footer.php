@@ -5,7 +5,7 @@
  * @package Potion
  */
 ?>
-
+    </div ><!-- .page-content -->
     <footer class="site-footer">
       Hello, I'm a footer
     </footer>

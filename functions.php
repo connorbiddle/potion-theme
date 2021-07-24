@@ -11,13 +11,21 @@ function potion_enqueue_scripts() {
 }
 
 function potion_custom_menus() {
-  register_nav_menus(
-    array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
-    )
-  );
+  register_nav_menus(array(
+    'header-menu' => __( 'Header Menu' ),
+    'footer-menu' => __( 'Footer Menu' )
+  ) );
+}
+
+function potion_custom_logo() {
+  add_theme_support( 'custom-logo', array(
+    'height'               => 112.5,
+    'width'                => 200,
+    'flex-height'          => true,
+    'flex-width'           => true
+  ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'potion_enqueue_scripts' );
 add_action( 'init', 'potion_custom_menus' );
+add_action( 'after_setup_theme', 'potion_custom_logo');
