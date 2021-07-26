@@ -1,0 +1,71 @@
+.showcase {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  height: 600px;
+
+  @include fromSize($bpMd) {
+    height: 650px;
+  }
+  @include fromSize($bpLg) {
+    height: 700px;
+  }
+
+  &.no-thumbnail {
+    background-color: #adadad;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5970588919161415) 0%,
+      rgba(0, 0, 0, 0.6) 15%,
+      rgba(0, 0, 0, 0) 100%
+    );
+  }
+
+  &__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__contents {
+    position: absolute;
+    z-index: 2;
+    bottom: calc(3rem + 2.5vw);
+    color: $white;
+
+    @include untilSize($bpMd) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  &__title {
+    line-height: 1.35;
+    margin-bottom: 0.5em;
+    font-size: 1.85rem;
+    @include fromSize($bpMd) {
+      font-size: 2.3rem;
+    }
+    @include fromSize($bpLg) {
+      font-size: 2.7rem;
+    }
+  }
+}

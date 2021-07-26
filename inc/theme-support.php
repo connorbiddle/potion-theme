@@ -9,4 +9,9 @@ function potion_custom_logo() {
   ) );
 }
 
-add_action( 'after_setup_theme', 'potion_custom_logo');
+function potion_post_thumbnails() {
+  add_theme_support( 'post-thumbnails' );
+}
+
+add_action( 'after_setup_theme', 'potion_custom_logo' );
+add_action( 'after_setup_theme', 'potion_post_thumbnails' );
