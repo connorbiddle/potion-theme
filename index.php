@@ -42,6 +42,7 @@
           the_post();
           get_template_part( 'template-parts/content/content' );
         endwhile;
+        the_posts_pagination();
         // Implement pagination here
       else:
         get_template_part( 'template-parts/content/content-none' );

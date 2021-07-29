@@ -1,0 +1,22 @@
+.pagination {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .page-numbers {
+    background-color: $lightGrey;
+    color: $black;
+    padding: 0.5rem 0.75rem;
+    margin: 0.5rem;
+    text-decoration: none;
+    border-radius: 0.25rem;
+  }
+
+  .page-numbers.current {
+    background-color: var(--primaryColor);
+    color: $white;
+  }
+}
