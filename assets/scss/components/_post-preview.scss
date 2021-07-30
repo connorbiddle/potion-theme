@@ -6,6 +6,7 @@
   text-decoration: none;
   margin-bottom: 3rem;
   padding: 1rem;
+  border: none;
 
   @include fromSize($bpSm) {
     padding: 2rem;

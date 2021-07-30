@@ -315,7 +315,8 @@ h6 {
   color: inherit;
   text-decoration: none;
   margin-bottom: 3rem;
-  padding: 1rem; }
+  padding: 1rem;
+  border: none; }
   @media screen and (min-width: 500px) {
     .post-preview {
       padding: 2rem; } }
