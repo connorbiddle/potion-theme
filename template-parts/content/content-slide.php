@@ -1,6 +1,8 @@
 <?php
   $post_thumbnail = has_post_thumbnail() ? get_the_post_thumbnail_url() : null;
-  $showcase_class = !$post_thumbnail ? "showcase no-thumbnail" : "showcase";
+  $showcase_class = "showcase showcase--slider";
+  $showcase_class =
+    $post_thumbnail ? $showcase_class : $showcase_class . " no-thumbnail";
 ?>
 
 <div class="swiper-slide">

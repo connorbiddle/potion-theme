@@ -34,6 +34,26 @@
     );
   }
 
+  .post-categories {
+    display: flex;
+    list-style: none;
+    margin-bottom: 0.5rem;
+    padding: 0;
+
+    li a {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-right: 1.25em;
+      border-bottom: none;
+    }
+
+    li a::before {
+      content: "•";
+      color: var(--primaryColor);
+      margin-right: 0.4em;
+    }
+  }
+
   &__image {
     position: relative;
     width: 100%;
@@ -46,7 +66,7 @@
   &__contents {
     position: absolute;
     z-index: 2;
-    bottom: calc(3rem + 2.5vw);
+    bottom: 1rem;
     color: $white;
 
     @include untilSize($bpMd) {
@@ -55,6 +75,10 @@
       align-items: center;
       text-align: center;
     }
+  }
+
+  &.showcase--slider .showcase__contents {
+    bottom: calc(2rem + 2.5vw);
   }
 
   &__title {

@@ -6,6 +6,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  line-height: 2;
 }
 
 .page-content {
@@ -18,12 +19,42 @@ img {
   max-width: 100%;
 }
 
+a {
+  text-decoration: none;
+  border-bottom: 0.15em solid var(--primaryColor);
+  color: inherit;
+}
+
+p,
+ul,
+ol {
+  margin-bottom: 1.5rem;
+}
+
 p {
   line-height: 2;
   font-size: 1.05rem;
-  margin-bottom: 1.5rem;
 
   &:last-child {
     margin-bottom: 0;
+  }
+}
+
+ul,
+ol {
+  font-size: 1.05rem;
+  padding-left: 1rem;
+}
+
+blockquote {
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid var(--primaryColor);
+  margin: 2rem 0;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-size: #{2rem - ($i * 0.125rem)};
+    margin-bottom: #{2rem - ($i * 0.1rem)};
   }
 }
