@@ -354,10 +354,11 @@ h6 {
 .pagination .page-numbers {
   background-color: #f3f3f3;
   color: #111;
-  padding: 0.5rem 0.75rem;
+  padding: 0.1rem 0.75rem;
   margin: 0.5rem;
   text-decoration: none;
-  border-radius: 0.25rem; }
+  border-radius: 0.25rem;
+  border: none; }
 
 .pagination .page-numbers.current {
   background-color: var(--primaryColor);
