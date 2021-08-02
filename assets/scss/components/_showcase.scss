@@ -17,6 +17,10 @@
     background-color: #adadad;
   }
 
+  &--page .showcase__title {
+    text-align: center;
+  }
+
   &::after {
     content: "";
     position: absolute;

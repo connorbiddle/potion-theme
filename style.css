@@ -253,6 +253,8 @@ h6 {
       height: 700px; } }
   .showcase.no-thumbnail {
     background-color: #adadad; }
+  .showcase--page .showcase__title {
+    text-align: center; }
   .showcase::after {
     content: "";
     position: absolute;
