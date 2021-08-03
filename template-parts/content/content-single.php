@@ -7,7 +7,11 @@
     <img class="showcase__image" src="<?php echo $post_thumbnail; ?>" alt="">
   <?php endif; ?>
   <div class="container--narrow showcase__contents">
-    <?php the_category(); ?>
+    <?php
+      if ( has_category() ):
+        the_category();
+      endif;
+    ?>
     <h2 class="showcase__title"><?php the_title(); ?></h2>
   </div>
 </section>
