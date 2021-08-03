@@ -11,7 +11,7 @@
 
   $slider_query = new WP_Query( array(
     'post_type'       => 'post',
-    'posts_per_page'  => 3
+    'posts_per_page'  => get_theme_mod( 'slide_count' )
   ) );
 
   if ( $slider_query->have_posts() ): ?>

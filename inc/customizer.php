@@ -5,6 +5,9 @@ function potion_customize_register( $wp_customize ) {
   $wp_customize->add_setting( 'primary_color' , array(
     'default'   => '#dc293c'
   ) );
+  $wp_customize->add_setting( 'slide_count' , array(
+    'default'   => 3
+  ) );
 
   // Sections
   $wp_customize->add_section( 'potion_settings' , array(
@@ -13,11 +16,17 @@ function potion_customize_register( $wp_customize ) {
   ) );
 
   // Controls
-  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'link_color', array(
+  $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'primary_color', array(
     'label'      => __( 'Primary Color', 'potion' ),
     'section'    => 'potion_settings',
     'settings'   => 'primary_color',
   ) ) );
+  $wp_customize->add_control( 'slide_count', array(
+    'label'     => __( 'Post Slider Slide Count', 'potion' ),
+    'section'   => 'potion_settings',
+    'settings'  => 'slide_count',
+    'type'      => 'number'
+  ) );
 }
 
 function potion_custom_css() {
