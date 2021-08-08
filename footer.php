@@ -6,9 +6,7 @@
  */
 ?>
 
-      <footer class="site-footer">
-        Hello, I'm a footer
-      </footer>
+      <?php get_template_part('template-parts/site-footer'); ?>
     </div ><!-- .page-content -->
     <?php wp_footer(); ?>
     <script>feather.replace();
