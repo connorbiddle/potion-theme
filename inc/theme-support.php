@@ -13,5 +13,10 @@ function potion_post_thumbnails() {
   add_theme_support( 'post-thumbnails' );
 }
 
+function potion_title_tag() {
+  add_theme_support( 'title-tag' );
+}
+
 add_action( 'after_setup_theme', 'potion_custom_logo' );
 add_action( 'after_setup_theme', 'potion_post_thumbnails' );
+add_action( 'after_setup_theme', 'potion_title_tag' );
