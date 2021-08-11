@@ -3,4 +3,21 @@
   margin-top: auto;
   color: $white;
   background-color: var(--primaryColor);
+  display: flex;
+
+  &__widgets {
+    display: flex;
+    flex-wrap: wrap;
+    padding: -1rem;
+  }
+
+  &__widgets > div {
+    min-width: 320px;
+    padding: 1rem;
+    flex-basis: 25%;
+
+    img {
+      height: auto;
+    }
+  }
 }
