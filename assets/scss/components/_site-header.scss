@@ -20,12 +20,12 @@
 
   &__logo {
     z-index: 101;
-    height: 35%;
+    width: 125px;
 
-    .custom-logo {
-      min-width: 100px;
-      width: 100px;
+    img.custom-logo {
+      width: 100%;
       height: auto;
+      margin-bottom: -4px;
     }
 
     a {

@@ -170,11 +170,11 @@ h6 {
   z-index: 100; }
   .site-header__logo {
     z-index: 101;
-    height: 35%; }
-    .site-header__logo .custom-logo {
-      min-width: 100px;
-      width: 100px;
-      height: auto; }
+    width: 125px; }
+    .site-header__logo img.custom-logo {
+      width: 100%;
+      height: auto;
+      margin-bottom: -4px; }
     .site-header__logo a {
       color: inherit;
       border-bottom: none; }
@@ -241,7 +241,7 @@ h6 {
     opacity: 1; } }
 
 .site-footer {
-  padding: 1rem;
+  padding: 1rem 0;
   margin-top: auto;
   color: #fff;
   background-color: var(--primaryColor);
@@ -249,13 +249,28 @@ h6 {
   .site-footer__widgets {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     padding: -1rem; }
+    .site-footer__widgets img {
+      height: auto; }
+    .site-footer__widgets h2 {
+      font-size: 1.5rem;
+      padding-bottom: 0.25em;
+      margin-bottom: 0.5em;
+      line-height: 1.5;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.75); }
+    .site-footer__widgets ul {
+      padding-left: 0; }
+    .site-footer__widgets ul li {
+      list-style: none;
+      line-height: 2; }
   .site-footer__widgets > div {
     min-width: 320px;
-    padding: 1rem;
-    flex-basis: 25%; }
-    .site-footer__widgets > div img {
-      height: auto; }
+    flex-basis: 375px;
+    padding: 1rem; }
+    @media screen and (min-width: 768px) {
+      .site-footer__widgets > div {
+        padding: 2rem; } }
 
 .showcase {
   width: 100%;
