@@ -146,13 +146,17 @@ h6 {
   padding-top: 5rem;
   padding-bottom: 8rem; }
 
-.button {
+.button, .post-page-numbers {
   display: inline-block;
+  cursor: pointer;
   padding: 0.6em 2em;
   background-color: var(--primaryColor);
   color: #fff;
   text-decoration: none;
   border-radius: 5px; }
+
+.post-page-numbers {
+  margin-top: 1rem; }
 
 .site-header {
   position: absolute;

@@ -15,7 +15,14 @@
   <div class="container--narrow">
     <article class="page">
       <div>
-        <?php the_content(); ?>
+        <?php
+          the_content();
+          wp_link_pages( array(
+            'next_or_number'  => 'next',
+            'before'          => null,
+            'after'           => null
+          ) );  
+        ?>
       </div>
     </article>
   </div>
