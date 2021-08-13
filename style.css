@@ -246,30 +246,31 @@ h6 {
   color: #fff;
   background-color: var(--primaryColor);
   display: flex; }
-  .site-footer__widgets {
+  .site-footer__content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     padding: -1rem; }
-    .site-footer__widgets img {
-      height: auto; }
-    .site-footer__widgets h2 {
+    .site-footer__content img {
+      height: auto;
+      margin-bottom: -4px; }
+    .site-footer__content h2 {
       font-size: 1.5rem;
       padding-bottom: 0.25em;
       margin-bottom: 0.5em;
       line-height: 1.5;
       border-bottom: 1px solid rgba(255, 255, 255, 0.75); }
-    .site-footer__widgets ul {
+    .site-footer__content ul {
       padding-left: 0; }
-    .site-footer__widgets ul li {
+    .site-footer__content ul li {
       list-style: none;
       line-height: 2; }
-  .site-footer__widgets > div {
+  .site-footer__content > div {
     min-width: 320px;
     flex-basis: 375px;
     padding: 1rem; }
     @media screen and (min-width: 768px) {
-      .site-footer__widgets > div {
+      .site-footer__content > div {
         padding: 2rem; } }
 
 .showcase {

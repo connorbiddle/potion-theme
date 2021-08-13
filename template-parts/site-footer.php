@@ -1,7 +1,7 @@
-<footer class="site-footer">
-  <?php if ( is_active_sidebar( 'footer_widgets' ) ) : ?>
-    <div class="site-footer__widgets">
+<?php if ( is_active_sidebar( 'footer_widgets' ) ) : ?>
+  <footer class="site-footer">
+    <div class="site-footer__content">
       <?php dynamic_sidebar( 'footer_widgets' ); ?>
     </div>
+  </footer>
   <?php endif; ?>
-</footer>
