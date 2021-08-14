@@ -58,11 +58,26 @@
 
     li {
       list-style: none;
+      cursor: pointer;
     }
     a {
       border-bottom: none;
       color: inherit;
       font-weight: 700;
+    }
+    li.menu-item-has-children > a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &::after {
+        content: "";
+        background: url("./assets/img/down-white.svg") no-repeat center;
+        margin-left: 0.35em;
+        margin-top: 0.1em;
+        width: 0.7em;
+        height: 0.7em;
+      }
     }
 
     @include untilSize($bpMd) {
@@ -79,13 +94,26 @@
       left: 0;
       overflow: scroll;
 
-      background: rgba(0, 0, 0, 0.8);
+      background: rgba(0, 0, 0, 0.9);
       text-align: center;
-      padding: 7.5rem 1rem 2.5rem;
+      padding: 10rem 1rem 2.5rem;
 
       li {
         margin: 0.25rem 0;
         font-size: 1.25rem;
+      }
+    }
+
+    .sub-menu {
+      padding: 0.5rem;
+      margin: 0.5rem 0;
+      background-color: rgba(75, 75, 75, 0.1);
+      border: 1px solid rgba($darkGrey, 0.25);
+      border-radius: 3px;
+
+      display: none;
+      &.active {
+        display: block;
       }
     }
 
@@ -98,7 +126,25 @@
 
       li {
         line-height: 1.4;
-        margin: 0.25rem 0.5rem;
+        margin: 0.25rem 0.75rem;
+      }
+
+      li.menu-item-has-children {
+        position: relative;
+      }
+
+      .sub-menu {
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba($black, 0.15);
+        border: 1px solid rgba($black, 0.175);
+        white-space: nowrap;
+      }
+
+      .sub-menu li {
+        padding: 0.2em 0;
       }
     }
   }

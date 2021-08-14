@@ -10,12 +10,15 @@
       endif;
     ?>
   </div>
-  <div class="site-header__section grow">
-    <?php wp_nav_menu( array(
-      'theme_location' => 'header-menu',
-      'menu_class' => 'site-header__links',
-      'container' => false
-      ) ); ?>
+  <div class="site-header__section">
+    <?php
+      wp_nav_menu( array(
+        'theme_location'  => 'header-menu',
+        'menu_class'      => 'site-header__links',
+        'container'       => false,
+        'depth'           => 2
+      ) );
+    ?>
   </div>
   <div class="site-header__section site-header__buttons">
     <button class="site-header__search-button">
