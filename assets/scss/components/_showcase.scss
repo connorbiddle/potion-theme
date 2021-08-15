@@ -89,11 +89,33 @@
     line-height: 1.35;
     margin-bottom: 0.5em;
     font-size: 1.85rem;
+    display: flex;
+    align-items: center;
+
     @include fromSize($bpMd) {
       font-size: 2.3rem;
     }
     @include fromSize($bpLg) {
       font-size: 2.7rem;
     }
+
+    .post-edit-link {
+      display: flex;
+      align-items: center;
+      border: none;
+    }
+
+    .post-edit-link::after {
+      content: "";
+      display: block;
+      background-image: url("./assets/img/edit.svg");
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: 0.75rem;
+    }
+  }
+
+  &--page .showcase__title {
+    justify-content: center;
   }
 }

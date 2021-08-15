@@ -12,7 +12,12 @@
         the_category();
       endif;
     ?>
-    <h2 class="showcase__title"><?php the_title(); ?></h2>
+    <h2 class="showcase__title">
+      <?php
+        the_title();
+        edit_post_link("");
+      ?>  
+    </h2>
   </div>
 </section>
 

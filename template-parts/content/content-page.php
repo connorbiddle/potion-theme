@@ -7,7 +7,12 @@
     <img class="showcase__image" src="<?php echo $post_thumbnail; ?>" alt="">
   <?php endif; ?>
   <div class="container--narrow showcase__contents">
-    <h2 class="showcase__title"><?php the_title(); ?></h2>
+    <h2 class="showcase__title">
+      <?php
+        the_title();
+        edit_post_link("");
+      ?>
+    </h2>
   </div>
 </section>
 
