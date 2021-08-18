@@ -534,7 +534,7 @@ h6 {
     text-decoration: underline;
     font-size: 0.9rem; }
 
-.comment-respond label[for="comment"] {
+.comment-respond label {
   display: block; }
 
 .comment-respond textarea#comment {
@@ -545,3 +545,15 @@ h6 {
   padding: 0.75rem;
   border: 1px solid #dbdbdb;
   border-radius: 3px; }
+
+.comment-respond input[type="text"],
+.comment-respond input[type="email"] {
+  padding: 0.75rem;
+  font-family: inherit;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  width: 100%; }
+
+.comment-respond .comment-form-cookies-consent label {
+  display: inline;
+  margin-left: 0.5rem; }
