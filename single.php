@@ -1,6 +1,6 @@
 <?php
 /**
- * The single post template file.
+ * The single post template.
  * 
  * @package Potion
  */

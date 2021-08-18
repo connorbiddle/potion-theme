@@ -146,14 +146,16 @@ h6 {
   padding-top: 5rem;
   padding-bottom: 8rem; }
 
-.button, .post-page-numbers {
+.button, .post-page-numbers, .comment-navigation .nav-previous a,
+.comment-navigation .nav-next a, .comment-list .comment-reply-link {
   display: inline-block;
   cursor: pointer;
-  padding: 0.6em 2em;
+  padding: 1em 2em;
   background-color: var(--primaryColor);
   color: #fff;
   text-decoration: none;
-  border-radius: 5px; }
+  border-radius: 5px;
+  line-height: 1.4; }
 
 .post-page-numbers {
   margin-top: 1rem; }
@@ -449,3 +451,66 @@ h6 {
 
 .single__meta {
   color: #8a8a8a; }
+
+.comments-area {
+  margin-top: 3rem; }
+
+.comment-navigation {
+  display: flex;
+  margin-bottom: 1rem; }
+  .comment-navigation .nav-previous a,
+  .comment-navigation .nav-next a {
+    margin-right: 0.5em; }
+
+.comment-list {
+  list-style: none;
+  padding: 0; }
+  .comment-list .comment {
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem; }
+  .comment-list .comment-author {
+    display: flex;
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-direction: column; }
+  .comment-list .avatar {
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    border: 1px solid #dbdbdb;
+    display: none; }
+  .comment-list cite.fn a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    margin-right: 0.75rem; }
+  .comment-list .date {
+    font-size: 0.8rem;
+    color: #8a8a8a;
+    margin-right: 1rem;
+    line-height: 1.4; }
+  .comment-list .comment-edit-link {
+    font-size: 0.8rem;
+    border: none;
+    color: #8a8a8a; }
+  .comment-list .comment-content p {
+    margin-bottom: 1rem; }
+  .comment-list .comment-reply-link {
+    font-size: 1rem;
+    padding: 0.6em 1.5em;
+    margin-top: 0.25rem; }
+  @media screen and (min-width: 768px) {
+    .comment-list .comment {
+      padding: 1.25rem; }
+    .comment-list .comment-author {
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem; }
+    .comment-list .avatar {
+      display: inline; }
+    .comment-list .comment-edit-link {
+      margin-left: auto; } }

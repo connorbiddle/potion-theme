@@ -1,0 +1,95 @@
+.comments-area {
+  margin-top: 3rem;
+}
+
+.comment-navigation {
+  display: flex;
+  margin-bottom: 1rem;
+
+  .nav-previous a,
+  .nav-next a {
+    @extend .button;
+    margin-right: 0.5em;
+  }
+}
+
+// ---- OLD STYLES ----
+.comment-list {
+  list-style: none;
+  padding: 0;
+
+  .comment {
+    border: 1px solid $midGrey;
+    border-radius: 3px;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .comment-author {
+    display: flex;
+    border-bottom: 1px solid $midGrey;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    flex-direction: column;
+  }
+
+  .avatar {
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    border: 1px solid $midGrey;
+    display: none;
+  }
+
+  cite.fn a {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: none;
+    margin-right: 0.75rem;
+  }
+
+  .date {
+    font-size: 0.8rem;
+    color: $darkGrey;
+    margin-right: 1rem;
+    line-height: 1.4;
+  }
+
+  .comment-edit-link {
+    font-size: 0.8rem;
+    border: none;
+    color: $darkGrey;
+  }
+
+  .comment-content p {
+    margin-bottom: 1rem;
+  }
+
+  .comment-reply-link {
+    @extend .button;
+    font-size: 1rem;
+    padding: 0.6em 1.5em;
+    margin-top: 0.25rem;
+  }
+
+  @include fromSize($bpMd) {
+    .comment {
+      padding: 1.25rem;
+    }
+
+    .comment-author {
+      flex-direction: row;
+      align-items: center;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .avatar {
+      display: inline;
+    }
+
+    .comment-edit-link {
+      margin-left: auto;
+    }
+  }
+}

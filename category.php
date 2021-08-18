@@ -1,6 +1,6 @@
 <?php
 /**
- * The main template file, displaying recent posts.
+ * The category archive template.
  * 
  * @package Potion
  */
