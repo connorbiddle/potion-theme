@@ -31,7 +31,7 @@
         <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'potion' ); ?></h1>
         <div class="nav-previous"><?php previous_comments_link( __( 'Older Comments', 'potion' ) ); ?></div>
         <div class="nav-next"><?php next_comments_link( __( 'Newer Comments', 'potion' ) ); ?></div>
-      </nav><!-- .comment-navigation -->
+      </nav>
     <?php endif; ?>
 
     <?php if ( ! comments_open() && get_comments_number() ) : ?>
@@ -39,9 +39,10 @@
         <?php _e( 'Comments are closed.' , 'potion' ); ?>
       </p>
     <?php endif; ?>
+  <?php endif; ?>
 
-  <?php endif; // have_comments() ?>
+  <?php comment_form( array(
+    'class_submit' => 'submit button'
+  ) ); ?>
 
-  <?php comment_form(); ?>
- 
-</div><!-- #comments -->
+</div>

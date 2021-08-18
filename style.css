@@ -155,7 +155,9 @@ h6 {
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
-  line-height: 1.4; }
+  line-height: 1.4;
+  font-family: inherit;
+  border: none; }
 
 .post-page-numbers {
   margin-top: 1rem; }
@@ -452,12 +454,12 @@ h6 {
 .single__meta {
   color: #8a8a8a; }
 
-.comments-area {
+.comments-area,
+.comment-respond {
   margin-top: 3rem; }
 
 .comment-navigation {
-  display: flex;
-  margin-bottom: 1rem; }
+  display: flex; }
   .comment-navigation .nav-previous a,
   .comment-navigation .nav-next a {
     margin-right: 0.5em; }
@@ -470,6 +472,8 @@ h6 {
     border-radius: 3px;
     padding: 0.75rem;
     margin-bottom: 1.5rem; }
+    .comment-list .comment:last-child {
+      margin-bottom: 0; }
   .comment-list .comment-author {
     display: flex;
     border-bottom: 1px solid #dbdbdb;
@@ -502,6 +506,10 @@ h6 {
     font-size: 1rem;
     padding: 0.6em 1.5em;
     margin-top: 0.25rem; }
+  .comment-list .children {
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0; }
   @media screen and (min-width: 768px) {
     .comment-list .comment {
       padding: 1.25rem; }
@@ -514,3 +522,26 @@ h6 {
       display: inline; }
     .comment-list .comment-edit-link {
       margin-left: auto; } }
+
+.comment-respond .comment-reply-title {
+  margin-bottom: 0; }
+
+.comment-respond .logged-in-as {
+  color: #8a8a8a;
+  margin-bottom: 0.5rem; }
+  .comment-respond .logged-in-as a {
+    border: none;
+    text-decoration: underline;
+    font-size: 0.9rem; }
+
+.comment-respond label[for="comment"] {
+  display: block; }
+
+.comment-respond textarea#comment {
+  width: 100%;
+  resize: vertical;
+  font-family: inherit;
+  min-height: 8rem;
+  padding: 0.75rem;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px; }
