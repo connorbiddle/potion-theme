@@ -9,9 +9,12 @@
 <?php
   get_header();
   $category_image = get_the_post_thumbnail_url();
+    $showcase_class = $category_image
+    ? "showcase showcase--page"
+    : "showcase showcase--page no-image";
 ?>
 
-<section class="showcase showcase--page">
+<section class="<?php echo $showcase_class; ?>">
   <?php if ( $category_image ): ?>
     <img class="showcase__image" src="<?php echo $category_image; ?>" alt="">
   <?php endif; ?>
