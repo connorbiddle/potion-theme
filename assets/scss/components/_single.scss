@@ -1,6 +1,8 @@
 .single {
   &__header {
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+    border-bottom: 1px solid $midGrey;
   }
 
   &__meta {
