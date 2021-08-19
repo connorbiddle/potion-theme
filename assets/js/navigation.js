@@ -1,6 +1,7 @@
 const setUpNavigation = () => {
   // Node selection
   const navigation = document.querySelector(".site-header__links");
+  const searchModal = document.querySelector(".site-header__search-modal");
   const navButton = document.querySelector(".site-header__menu-button");
   const searchButton = document.querySelector(".site-header__search-button");
 
@@ -12,16 +13,20 @@ const setUpNavigation = () => {
   }));
 
   // State
-  let open = false;
+  let navOpen = false;
+  let searchOpen = false;
 
   // Functions
   const toggleNav = () => {
+    if (searchOpen) toggleSearch();
     navigation.classList.toggle("active");
-    open = !open;
+    navOpen = !navOpen;
   };
 
   const toggleSearch = () => {
-    alert("Search!");
+    if (navOpen) toggleNav();
+    searchModal.classList.toggle("active");
+    searchOpen = !searchOpen;
   };
 
   const toggleDropdown = dropdown => {

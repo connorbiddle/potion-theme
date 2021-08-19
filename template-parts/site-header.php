@@ -28,4 +28,7 @@
       <i data-feather="menu"></i>
     </button>
   </div>
+  <div class="site-header__search-modal">
+    <?php get_search_form(); ?>
+  </div>
 </header>
