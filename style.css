@@ -173,8 +173,6 @@ h6 {
   height: 6rem;
   padding: 0 1rem;
   color: #fff;
-  background: black;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 100; }
   .site-header__logo {
     z-index: 101;
@@ -355,7 +353,8 @@ h6 {
   display: flex;
   justify-content: center;
   overflow: hidden;
-  height: 600px; }
+  height: 600px;
+  background-color: var(--primaryColor); }
   @media screen and (min-width: 768px) {
     .showcase {
       height: 650px; } }
@@ -375,7 +374,10 @@ h6 {
     height: 100%;
     z-index: 1;
     background: rgba(0, 0, 0, 0.2);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.597059) 0%, rgba(0, 0, 0, 0.6) 15%, rgba(0, 0, 0, 0) 100%); }
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 15%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.6) 100%); }
+  .showcase.no-image::after {
+    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0.35) 15%, rgba(0, 0, 0, 0) 85%, rgba(0, 0, 0, 0.35) 100%); }
   .showcase .post-categories {
     display: flex;
     list-style: none;
@@ -593,3 +595,9 @@ h6 {
 .comment-respond .comment-form-cookies-consent label {
   display: inline;
   margin-left: 0.5rem; }
+
+.no-content {
+  padding: 5rem 0;
+  text-align: center; }
+  .no-content .no-content__heading {
+    margin-bottom: 0.5rem; }

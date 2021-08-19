@@ -5,6 +5,7 @@
   justify-content: center;
   overflow: hidden;
   height: 600px;
+  background-color: var(--primaryColor);
 
   @include fromSize($bpMd) {
     height: 650px;
@@ -32,9 +33,21 @@
     background: rgba(0, 0, 0, 0.2);
     background: linear-gradient(
       0deg,
-      rgba(0, 0, 0, 0.5970588919161415) 0%,
+      rgba(0, 0, 0, 0.6) 0%,
       rgba(0, 0, 0, 0.6) 15%,
-      rgba(0, 0, 0, 0) 100%
+      rgba(0, 0, 0, 0) 85%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+  }
+
+  &.no-image::after {
+    background: rgba(0, 0, 0, 0.2);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.35) 0%,
+      rgba(0, 0, 0, 0.35) 15%,
+      rgba(0, 0, 0, 0) 85%,
+      rgba(0, 0, 0, 0.35) 100%
     );
   }
 

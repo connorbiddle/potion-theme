@@ -10,12 +10,15 @@
 
 <?php
   get_header();
-  $category_image = get_the_post_thumbnail_url();
+  $search_image = get_the_post_thumbnail_url();
+  $showcase_class = $search_image
+    ? "showcase showcase--page"
+    : "showcase showcase--page no-image";
 ?>
 
-<section class="showcase showcase--page">
-  <?php if ( $category_image ): ?>
-    <img class="showcase__image" src="<?php echo $category_image; ?>" alt="">
+<section class="<?php echo $showcase_class; ?>">
+  <?php if ( $search_image ): ?>
+    <img class="showcase__image" src="<?php echo $search_image; ?>" alt="">
   <?php endif; ?>
   <div class="container--narrow showcase__contents">
     <h2 class="showcase__title">
