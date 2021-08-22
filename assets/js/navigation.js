@@ -1,9 +1,10 @@
 const setUpNavigation = () => {
   // Node selection
   const navigation = document.querySelector(".site-header__links");
-  const searchModal = document.querySelector(".site-header__search-modal");
   const navButton = document.querySelector(".site-header__menu-button");
+  const searchModal = document.querySelector(".site-header__search-modal");
   const searchButton = document.querySelector(".site-header__search-button");
+  const searchField = document.querySelector(".search-field");
 
   const dropdowns = Array.from(
     document.querySelectorAll(".menu-item-has-children")
@@ -27,6 +28,7 @@ const setUpNavigation = () => {
     if (navOpen) toggleNav();
     searchModal.classList.toggle("active");
     searchOpen = !searchOpen;
+    if (searchOpen) setTimeout(() => searchField.focus(), 50);
   };
 
   const toggleDropdown = dropdown => {
